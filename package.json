@@ -1,0 +1,28 @@
+{
+  "name": "gitterbot",
+  "version": "1.0.0",
+  "description": "Multipurpose bot for the gitter channel of GDG Jiit Noida.",
+  "main": "chatbot.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wimpykid26/GitterBot.git"
+  },
+  "keywords": [
+    "Bot"
+  ],
+  "author": "Dwaipayan Saha, Mayank Nayyar, Vaibhav Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wimpykid26/GitterBot/issues"
+  },
+  "homepage": "https://github.com/wimpykid26/GitterBot#readme"
+}
