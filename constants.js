@@ -3,7 +3,7 @@ const config = require('./config');
 
 const ROOM_ID = config.roomId;
 const TOKEN = config.token;
-const BOT_MENTION_NAME = '@gdg-bot';
+const BOT_MENTION_NAME = '@gdgbot';
 const META_HANDSHAKE_SUFFIX_URL = '/meta/handshake';
 const FAYE_CLIENT_URL = 'https://ws.gitter.im/faye';
 const CHATROOM_SUFFIX_URL = `/v1/rooms/${ROOM_ID}/chatMessages`;
