@@ -38,6 +38,7 @@ const client = new Faye.Client(constants.FAYE_CLIENT_URL, {
 // Create and add the Client Authentication extension.
 
 client.addExtension(getClientAuthExt());
+console.log("outside");
 client.subscribe(constants.CLIENT_SUBSCRIBE_URL, (msg) => {
   console.log("Asdvasyudv");
   if (msg.model && msg.model.fromUser) {
@@ -48,4 +49,19 @@ client.subscribe(constants.CLIENT_SUBSCRIBE_URL, (msg) => {
   else {
     console.log("Something went wrong");
   }
-}, {});
+}, (err) => {
+  console.log(err);
+});
+client.subscribe('/api/v1/rooms/58825514d73408ce4f44e76c', (msg) => {
+  console.log("Asdvasyudv");
+  if (msg.model && msg.model.fromUser) {
+    console.log('Message: ', msg.model.text);
+    console.log('From: ', msg.model.fromUser.displayName);
+    //replyToUser(msg.model.fromUser, msg.model.text);
+  }
+  else {
+    console.log("Something went wrong");
+  }
+}, (err) => {
+  console.log(err);
+});

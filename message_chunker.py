@@ -24,6 +24,8 @@ def message_chunk(command):
             for inner_subtree in outer_subtree:
                 if inner_subtree[1] == 'NNP':
                     output_command += ' ' + inner_subtree[0]
+                elif inner_subtree[1] == 'NNS':
+                    output_command += ' ' + inner_subtree[0]
                 elif inner_subtree[1] == 'NN':
                     if inner_subtree[0] == 'location':
                         output_command += ' ' + 'locate'
@@ -32,10 +34,12 @@ def message_chunk(command):
                     else:
                         output_command += ' ' + inner_subtree[0]
                 elif inner_subtree[1] == 'JJ':
-                    if inner_subtree[0] in ['wiki', 'locate']:
+                    if inner_subtree[0] in ['wiki', 'locate', 'repository']:
                         output_command += ' ' + inner_subtree[0]
     output_command = output_command.strip()
+    if 'title' in output_command:
+        output_command = output_command.replace(' title', '')
     print(output_command)
     ##return output_command
 
-message_chunk("create an issue with the title Design Implementation")
+message_chunk("show all issues in gdgbot")

@@ -21,7 +21,7 @@ jspm_packages
 
 # Optional npm cache directory
 .npm
-
+*.pyc
 # Optional eslint cache
 .eslintcache
 
